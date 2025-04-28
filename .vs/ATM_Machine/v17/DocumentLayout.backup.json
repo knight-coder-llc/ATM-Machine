@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|c:\\users\\admin\\source\\repos\\atm_machine\\usermenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|solutionrelative:usermenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|c:\\users\\admin\\source\\repos\\atm_machine\\customerinputform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|solutionrelative:customerinputform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|c:\\users\\admin\\source\\repos\\atm_machine\\customerinputform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|solutionrelative:customerinputform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|c:\\users\\admin\\source\\repos\\atm_machine\\accountslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|solutionrelative:accountslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|C:\\Users\\admin\\source\\repos\\ATM_Machine\\accountslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|solutionrelative:accountslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|c:\\users\\admin\\source\\repos\\atm_machine\\usermenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|solutionrelative:usermenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|c:\\users\\admin\\source\\repos\\atm_machine\\usermenu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|solutionrelative:usermenu.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|c:\\users\\admin\\source\\repos\\atm_machine\\atm-login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|solutionrelative:atm-login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|C:\\Users\\admin\\source\\repos\\ATM_Machine\\usermenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|solutionrelative:usermenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|C:\\Users\\admin\\source\\repos\\ATM_Machine\\atm-login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|solutionrelative:atm-login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|c:\\users\\admin\\source\\repos\\atm_machine\\atm-login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|solutionrelative:atm-login.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|c:\\users\\admin\\source\\repos\\atm_machine\\accountslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|solutionrelative:accountslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|c:\\users\\admin\\source\\repos\\atm_machine\\accountslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|solutionrelative:accountslist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|c:\\users\\admin\\source\\repos\\atm_machine\\atm-login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6859EE7D-9448-492C-8DA7-977FD13C229C}|ATM_Machine.csproj|solutionrelative:atm-login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,62 +42,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "CustomerInputForm.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\CustomerInputForm.cs",
+              "RelativeDocumentMoniker": "CustomerInputForm.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\CustomerInputForm.cs",
+              "RelativeToolTip": "CustomerInputForm.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAQwFUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T20:51:32.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerInputForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\CustomerInputForm.cs",
+              "RelativeDocumentMoniker": "CustomerInputForm.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\CustomerInputForm.cs [Design]",
+              "RelativeToolTip": "CustomerInputForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T20:31:21.179Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AccountsList.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\AccountsList.cs",
               "RelativeDocumentMoniker": "AccountsList.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\AccountsList.cs",
-              "RelativeToolTip": "AccountsList.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCoAAAARAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\AccountsList.cs*",
+              "RelativeToolTip": "AccountsList.cs*",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAQwFgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T00:30:49.153Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "AccountsList.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\AccountsList.cs",
               "RelativeDocumentMoniker": "AccountsList.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\AccountsList.cs [Design]",
-              "RelativeToolTip": "AccountsList.cs [Design]",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\AccountsList.cs [Design]*",
+              "RelativeToolTip": "AccountsList.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-26T00:25:15.912Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "UserMenu.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\UserMenu.cs",
               "RelativeDocumentMoniker": "UserMenu.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\UserMenu.cs",
               "RelativeToolTip": "UserMenu.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwD0AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-25T23:31:32.326Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserMenu.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\UserMenu.Designer.cs",
-              "RelativeDocumentMoniker": "UserMenu.Designer.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\UserMenu.Designer.cs",
-              "RelativeToolTip": "UserMenu.Designer.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAmwBYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-25T23:25:20.126Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "UserMenu.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\UserMenu.cs",
               "RelativeDocumentMoniker": "UserMenu.cs",
@@ -109,33 +121,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "ATM-Login.cs",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\ATM-Login.cs",
               "RelativeDocumentMoniker": "ATM-Login.cs",
               "ToolTip": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\ATM-Login.cs",
               "RelativeToolTip": "ATM-Login.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAowBAAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowBcAAAB0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T23:16:15.379Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ATM-Login.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\ATM-Login.Designer.cs",
-              "RelativeDocumentMoniker": "ATM-Login.Designer.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\ATM-Login.Designer.cs",
-              "RelativeToolTip": "ATM-Login.Designer.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAmwHgAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T20:51:01.21Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ATM-Login.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\ATM_Machine\\ATM-Login.cs",
               "RelativeDocumentMoniker": "ATM-Login.cs",

@@ -17,3 +17,5 @@ C:\Users\admin\source\repos\ATM_Machine\obj\Debug\net8.0-windows\refint\ATM_Mach
 C:\Users\admin\source\repos\ATM_Machine\obj\Debug\net8.0-windows\ATM_Machine.pdb
 C:\Users\admin\source\repos\ATM_Machine\obj\Debug\net8.0-windows\ATM_Machine.genruntimeconfig.cache
 C:\Users\admin\source\repos\ATM_Machine\obj\Debug\net8.0-windows\ref\ATM_Machine.dll
+C:\Users\admin\source\repos\ATM_Machine\obj\Debug\net8.0-windows\ATM_Machine.sourcelink.json
+C:\Users\admin\source\repos\ATM_Machine\obj\Debug\net8.0-windows\ATM_Machine.CustomerInputForm.resources

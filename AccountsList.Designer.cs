@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label3 = new Label();
             label1 = new Label();
+            label3 = new Label();
             panel2 = new Panel();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            label2 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -46,17 +48,6 @@
             panel1.Size = new Size(800, 38);
             panel1.TabIndex = 1;
             // 
-            // label3
-            // 
-            label3.Anchor = AnchorStyles.None;
-            label3.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Location = new Point(630, -23);
-            label3.Name = "label3";
-            label3.Size = new Size(145, 30);
-            label3.TabIndex = 0;
-            label3.Text = "ATM System";
-            // 
             // label1
             // 
             label1.Anchor = AnchorStyles.None;
@@ -68,6 +59,17 @@
             label1.TabIndex = 1;
             label1.Text = "ATM System";
             // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.None;
+            label3.Font = new Font("Tahoma", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.ButtonHighlight;
+            label3.Location = new Point(630, -23);
+            label3.Name = "label3";
+            label3.Size = new Size(145, 30);
+            label3.TabIndex = 0;
+            label3.Text = "ATM System";
+            // 
             // panel2
             // 
             panel2.BackColor = Color.Blue;
@@ -77,11 +79,36 @@
             panel2.Size = new Size(800, 36);
             panel2.TabIndex = 2;
             // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.AutoSize = true;
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(0, 82);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(800, 332);
+            flowLayoutPanel1.TabIndex = 3;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Dock = DockStyle.Top;
+            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(0, 38);
+            label2.Name = "label2";
+            label2.Size = new Size(224, 30);
+            label2.TabIndex = 4;
+            label2.Text = "Choose Your Account";
+            label2.TextAlign = ContentAlignment.TopCenter;
+            // 
             // AccountsList
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label2);
+            Controls.Add(flowLayoutPanel1);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "AccountsList";
@@ -90,6 +117,7 @@
             Load += AccountsList_Load;
             panel1.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -98,5 +126,7 @@
         private Label label3;
         private Label label1;
         private Panel panel2;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private Label label2;
     }
 }

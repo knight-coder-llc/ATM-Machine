@@ -22,12 +22,27 @@ namespace ATM_Machine
 
         private void AccountsList_Load(object sender, EventArgs e)
         {
-            string json = @"[
-              { ""text"": ""123456"" },
-              { ""text"": ""123456"" },
-              { ""text"": ""123456"" },
-              { ""text"": ""123456"" }
-            ]";
+                    string json = @"[
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" },
+                          { ""Text"": ""123456"" }
+                        ]";
 
             List<DynamicBottonModel> buttonList = JsonSerializer.Deserialize<List<DynamicBottonModel>>(json);
 
@@ -37,22 +52,52 @@ namespace ATM_Machine
                 return;
             }
 
+            int yOffset = 10; // vertical spacing between buttons
+
             foreach (var btnData in buttonList)
             {
                 Button btn = new Button
                 {
                     Text = btnData.Text,
-                    Width = 100,
-                    Height = 40,
-                    Margin = new Padding(10),
+                    Width = 150,
+                    Height = 50,
+                    Top = yOffset,
+                    Left = 10,
                     ForeColor = Color.White,
                     BackColor = Color.Blue,
+                    Font = new Font("Segoe UI", 16, FontStyle.Bold),
                 };
 
-                btn.Click += (s, e) =>
+                string Operation = "withdrawal";
+                CustomerInputForm customerInputForm = new CustomerInputForm();
+
+                switch (Operation)
                 {
-                    MessageBox.Show($"{btn.Text} Clicked!!");
-                };
+                    case "check_balance":
+                        btn.Click += (s, args) =>
+                        {
+                            //MessageBox.Show($"{btn.Text} Clicked!!");
+                            MessageBox.Show("$5,000.00");
+                        };
+                        break;
+                    case "withdrawal":
+                        btn.Click += (s, args) =>
+                        { 
+                            this.Hide();
+                            customerInputForm.FormClosed += (s, args) => this.Close();
+                            customerInputForm.Show();
+                        };
+                        break;
+                    default:
+                        MessageBox.Show("Invalid operation.", "Operation Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                }
+                
+                flowLayoutPanel1.Controls.Add(btn);
+
+                //this.Controls.Add(btn);
+
+                yOffset += btn.Height + 10; // move next button down
             }
         }
     }
