@@ -42,30 +42,30 @@ namespace ATM_Machine
             MySql.Data.MySqlClient.MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection(connStr);
             try
             {
-                Console.WriteLine("Connecting to MySQL...");
+                System.Diagnostics.Debug.WriteLine("Connecting to MySQL...");
                 conn.Open();
                 //string sql = "SELECT MAX(TransNum) FROM changTransaction WHERE accountNum=@num";
-                string sql = "SELECT MAX(transactionNum) FROM 834_kilburn_transaction;";
+                string sql = "SELECT MAX(transactionNum) FROM 834_kilburn_transaction WHERE accountNum=@num";
                 MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(sql, conn);
-                //cmd.Parameters.AddWithValue("@num", accountNum);
+                cmd.Parameters.AddWithValue("@num", accountNum);
                 MySqlDataReader myReader = cmd.ExecuteReader();
                 if (myReader.Read())
                 {
                     transactionNum = Int32.Parse(myReader[0].ToString());
-                    Console.WriteLine("newTrans number" + transactionNum);
+                    System.Diagnostics.Debug.WriteLine("newTrans number" + transactionNum);
                 }
                 myReader.Close();
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
+                System.Diagnostics.Debug.WriteLine(ex.ToString());
             }
             conn.Close();
-            Console.WriteLine("Done.");
+            System.Diagnostics.Debug.WriteLine("Done.");
 
             if (transactionNum == -1)
             {
-                Console.WriteLine("Error:  Cannot find and assign a new transaction number.");
+                System.Diagnostics.Debug.WriteLine("Error:  Cannot find and assign a new transaction number.");
             }
             else
             {
@@ -74,7 +74,7 @@ namespace ATM_Machine
                 conn = new MySql.Data.MySqlClient.MySqlConnection(connStr);
                 try
                 {
-                    Console.WriteLine("Connecting to MySQL...");
+                    System.Diagnostics.Debug.WriteLine("Connecting to MySQL...");
                     conn.Open();
                     string sql = "INSERT INTO 834_kilburn_transaction (transactionNum, accountNum, transactionType, amount, fromAccount, toAccount, date)" +
                         " VALUES (@tNum, @aNum, @tType, @amo, @fAcc, @tAcc, @dT)";

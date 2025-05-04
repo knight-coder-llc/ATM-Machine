@@ -15,11 +15,13 @@ namespace ATM_Machine
     partial class CustomerInputForm : Form
     {
         Account acc;
-        public CustomerInputForm(Account acc)
+        string ops;
+        public CustomerInputForm(Account acc, string ops)
         {
 
             InitializeComponent();
             this.acc = acc;
+            this.ops = ops;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -93,12 +95,47 @@ namespace ATM_Machine
                 double inputValue;
                 if (double.TryParse(textBox1.Text, out inputValue))
                 {
-                    int results = acc.withdrawMoney(inputValue, 100000);
-                    if (results == 1) MessageBox.Show("You have reached the daily transaction limit.");
-                    if (results == 2) MessageBox.Show("You deposit amount must not be more than the amount of $3000.00 for a daily transaction.");
-                    if (results == 3) MessageBox.Show("There is not enough money in your account to with draw the amount you entered.");
-                    if (results == 4) MessageBox.Show("There is not enough money in the atm to support your transaction.");
-                    if (results == 0) MessageBox.Show($"You have withdrawn the amount of ${textBox1.Text} from your account. You new balance for this account is now {acc.viewBalance()}.");
+                    if (ops == "withdrawal")
+                    {
+                        int results = acc.withdrawMoney(inputValue, 100000);
+                        if (results == 1) MessageBox.Show("You have reached the daily transaction limit.");
+                        if (results == 2) MessageBox.Show("You withdrawal amount must not be more than the amount of $3000.00 for a daily transaction.");
+                        if (results == 3) MessageBox.Show("There is not enough money in your account to with draw the amount you entered.");
+                        if (results == 4) MessageBox.Show("There is not enough money in the atm to support your transaction.");
+                        if (results == 0) MessageBox.Show($"You have withdrawn the amount of ${textBox1.Text} from your account. You new balance for this account is now {acc.viewBalance()}.");
+                        
+                        Customer currentCustomer = Account.getCustomer(acc.customerID).customer;
+                        UserMenu userMenuForm = new UserMenu(currentCustomer);
+
+                        this.Hide();
+                        userMenuForm.FormClosed += (s, args) => this.Close();
+                        userMenuForm.Show();
+                    }
+                    if (ops == "deposit")
+                    {
+                        int results = acc.depositMoney(inputValue, 100000);
+                        if (results == 1) MessageBox.Show("You have reached the daily transaction limit.");
+                        if (results == 2) MessageBox.Show("You deposit amount must not be more than the amount of $3000.00 for a daily transaction.");
+                        //if (results == 3) MessageBox.Show("There is not enough money in your account to with draw the amount you entered.");
+                        //if (results == 4) MessageBox.Show("There is not enough money in the atm to support your transaction.");
+                        if (results == 0) MessageBox.Show($"You have deposited the amount of ${textBox1.Text} to your account. You new balance for this account is now {acc.viewBalance()}.");
+                        Customer currentCustomer = Account.getCustomer(acc.customerID).customer;
+                        UserMenu userMenuForm = new UserMenu(currentCustomer);
+
+                        this.Hide();
+                        userMenuForm.FormClosed += (s, args) => this.Close();
+                        userMenuForm.Show();
+                    }
+                    if (ops == "transfer")
+                    {
+                        acc.transferMoney(inputValue, 100000, acc);
+                        Customer currentCustomer = Account.getCustomer(acc.customerID).customer;
+                        UserMenu userMenuForm = new UserMenu(currentCustomer);
+
+                        this.Hide();
+                        userMenuForm.FormClosed += (s, args) => this.Close();
+                        userMenuForm.Show();
+                    }
                 }
                 else
                 {

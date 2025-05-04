@@ -10,6 +10,7 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySqlX.XDevAPI.Common;
 //using Newtonsoft.Json;
 
 namespace ATM_Machine
@@ -32,6 +33,12 @@ namespace ATM_Machine
             if (accounts == null || accounts.Count == 0)
             {
                 MessageBox.Show("No Existing Accounts.");
+                
+                UserMenu userMenuForm = new UserMenu(customer);
+
+                this.Hide();
+                userMenuForm.FormClosed += (s, args) => this.Close();
+                userMenuForm.Show();
                 return;
             }
 
@@ -52,7 +59,7 @@ namespace ATM_Machine
                     Font = new Font("Segoe UI", 16, FontStyle.Bold),
                 };
 
-                CustomerInputForm customerInputForm = new CustomerInputForm(acc);
+                CustomerInputForm customerInputForm = new CustomerInputForm(acc, this.Operation);
 
                 switch (this.Operation)
                 {
@@ -70,8 +77,29 @@ namespace ATM_Machine
                             customerInputForm.Show();
                         };
                         break;
+                    case "deposit":
+                        btn.Click += (s, args) =>
+                        {
+                            this.Hide();
+                            customerInputForm.FormClosed += (s, args) => this.Close();
+                            customerInputForm.Show();
+                        };
+                        break;
+                    case "transfer":
+                        btn.Click += (s, args) =>
+                        {
+                            this.Hide();
+                            customerInputForm.FormClosed += (s, args) => this.Close();
+                            customerInputForm.Show();
+                        };
+                        break;
                     default:
                         MessageBox.Show("Invalid operation.", "Operation Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        UserMenu userMenuForm = new UserMenu(customer);
+                        this.Hide();
+                        userMenuForm.FormClosed += (s, args) => this.Close();
+                        userMenuForm.Show();
                         break;
                 }
 

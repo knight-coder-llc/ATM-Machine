@@ -29,7 +29,7 @@ namespace ATM_Machine
         // DEPOSIT MONEY
         private void button3_Click(object sender, EventArgs e)
         {
-            AccountsList accountsList = new AccountsList("transfer", customer);
+            AccountsList accountsList = new AccountsList("deposit", customer);
             this.Hide();
             accountsList.FormClosed += (s, args) => this.Close();
             accountsList.Show();
@@ -37,7 +37,7 @@ namespace ATM_Machine
         // TRANSFER MONEY
         private void button4_Click(object sender, EventArgs e)
         {
-            AccountsList accountsList = new AccountsList("deposit", customer);
+            AccountsList accountsList = new AccountsList("transfer", customer);
             this.Hide();
             accountsList.FormClosed += (s, args) => this.Close();
             accountsList.Show();
