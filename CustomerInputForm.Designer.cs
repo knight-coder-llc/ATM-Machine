@@ -364,6 +364,7 @@
             Controls.Add(panel1);
             Name = "CustomerInputForm";
             Text = "CustomerInputForm";
+            WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

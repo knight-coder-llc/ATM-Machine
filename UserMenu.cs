@@ -10,29 +10,18 @@ using System.Windows.Forms;
 
 namespace ATM_Machine
 {
-    public partial class UserMenu : Form
+    partial class UserMenu : Form
     {
-        public UserMenu()
+        Customer customer;
+        public UserMenu(Customer customer)
         {
             InitializeComponent();
-        }
-        //CHECK BALANCE
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //UserMenu userMenuForm = new UserMenu();
-            //this.Hide();
-            //userMenuForm.FormClosed += (s, args) => this.Close();
-            //userMenuForm.Show();
-
-            AccountsList accountsList = new AccountsList();
-            this.Hide();
-            accountsList.FormClosed += (s, args) => this.Close();
-            accountsList.Show();
+            this.customer = customer;
         }
         // WITHDRAW MONEY
         private void button2_Click(object sender, EventArgs e)
         {
-            AccountsList accountsList = new AccountsList();
+            AccountsList accountsList = new AccountsList("withdrawal", customer);
             this.Hide();
             accountsList.FormClosed += (s, args) => this.Close();
             accountsList.Show();
@@ -40,7 +29,7 @@ namespace ATM_Machine
         // DEPOSIT MONEY
         private void button3_Click(object sender, EventArgs e)
         {
-            AccountsList accountsList = new AccountsList();
+            AccountsList accountsList = new AccountsList("transfer", customer);
             this.Hide();
             accountsList.FormClosed += (s, args) => this.Close();
             accountsList.Show();
@@ -48,7 +37,7 @@ namespace ATM_Machine
         // TRANSFER MONEY
         private void button4_Click(object sender, EventArgs e)
         {
-            AccountsList accountsList = new AccountsList();
+            AccountsList accountsList = new AccountsList("deposit", customer);
             this.Hide();
             accountsList.FormClosed += (s, args) => this.Close();
             accountsList.Show();
@@ -56,7 +45,7 @@ namespace ATM_Machine
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            AccountsList accountsList = new AccountsList();
+            AccountsList accountsList = new AccountsList("check_balance", customer);
             this.Hide();
             accountsList.FormClosed += (s, args) => this.Close();
             accountsList.Show();

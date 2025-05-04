@@ -8,14 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Text.RegularExpressions;
 
 namespace ATM_Machine
 {
-    public partial class CustomerInputForm : Form
+    partial class CustomerInputForm : Form
     {
-        public CustomerInputForm()
+        Account acc;
+        public CustomerInputForm(Account acc)
         {
+
             InitializeComponent();
+            this.acc = acc;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -83,7 +87,29 @@ namespace ATM_Machine
 
         private void button13_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Withdrawing $" + $"{textBox1.Text} from your account");
+            bool isDigitsOnly = Regex.IsMatch(textBox1.Text, @"^[\d,.]+$");
+            if (isDigitsOnly)
+            {
+                double inputValue;
+                if (double.TryParse(textBox1.Text, out inputValue))
+                {
+                    int results = acc.withdrawMoney(inputValue, 100000);
+                    if (results == 1) MessageBox.Show("You have reached the daily transaction limit.");
+                    if (results == 2) MessageBox.Show("You deposit amount must not be more than the amount of $3000.00 for a daily transaction.");
+                    if (results == 3) MessageBox.Show("There is not enough money in your account to with draw the amount you entered.");
+                    if (results == 4) MessageBox.Show("There is not enough money in the atm to support your transaction.");
+                    if (results == 0) MessageBox.Show($"You have withdrawn the amount of ${textBox1.Text} from your account. You new balance for this account is now {acc.viewBalance()}.");
+                }
+                else
+                {
+                    MessageBox.Show("Please enter a valid number.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("You need to enter valid input.");
+            }
+            
         }
 
         private void button14_Click(object sender, EventArgs e)

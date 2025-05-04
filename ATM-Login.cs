@@ -11,10 +11,10 @@ namespace ATM_Machine
         // LOGIN CONFIRM
         private void button1_Click(object sender, EventArgs e)
         {
-            // dummy login validation
-            if (userIdInput.Text == "admin" && pinInput.Text == "1234")
+            var result = Account.loginToAccount(userIdInput.Text, pinInput.Text);
+            if(result.status == 1)
             {
-                UserMenu userMenuForm = new UserMenu();
+                UserMenu userMenuForm = new UserMenu(result.customer);
                 this.Hide();
                 userMenuForm.FormClosed += (s, args) => this.Close();
                 userMenuForm.Show();

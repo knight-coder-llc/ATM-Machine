@@ -10,55 +10,39 @@ using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using Newtonsoft.Json;
 
 namespace ATM_Machine
 {
-    public partial class AccountsList : Form
+    partial class AccountsList : Form
     {
-        public AccountsList()
+        string Operation;
+        Customer customer;
+        public AccountsList(string ops, Customer customer)
         {
+            this.Operation = ops;
+            this.customer = customer;
             InitializeComponent();
         }
 
         private void AccountsList_Load(object sender, EventArgs e)
-        {
-                    string json = @"[
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" },
-                          { ""Text"": ""123456"" }
-                        ]";
+        {         
+            ArrayList accounts = Account.retrieveAccounts(customer.getID());
 
-            List<DynamicBottonModel> buttonList = JsonSerializer.Deserialize<List<DynamicBottonModel>>(json);
-
-            if (buttonList == null || buttonList.Count == 0)
+            if (accounts == null || accounts.Count == 0)
             {
-                MessageBox.Show("No buttons parsed from JSON.");
+                MessageBox.Show("No Existing Accounts.");
                 return;
             }
 
             int yOffset = 10; // vertical spacing between buttons
 
-            foreach (var btnData in buttonList)
+            foreach (var btnData in accounts)
             {
+                Account acc = (Account)btnData;
                 Button btn = new Button
                 {
-                    Text = btnData.Text,
+                    Text = acc.getAccountNum().ToString(),
                     Width = 150,
                     Height = 50,
                     Top = yOffset,
@@ -68,21 +52,19 @@ namespace ATM_Machine
                     Font = new Font("Segoe UI", 16, FontStyle.Bold),
                 };
 
-                string Operation = "withdrawal";
-                CustomerInputForm customerInputForm = new CustomerInputForm();
+                CustomerInputForm customerInputForm = new CustomerInputForm(acc);
 
-                switch (Operation)
+                switch (this.Operation)
                 {
                     case "check_balance":
                         btn.Click += (s, args) =>
-                        {
-                            //MessageBox.Show($"{btn.Text} Clicked!!");
-                            MessageBox.Show("$5,000.00");
+                        {                        
+                            MessageBox.Show($"In account {btn.Text} you have ${acc.viewBalance().ToString()}.");
                         };
                         break;
                     case "withdrawal":
                         btn.Click += (s, args) =>
-                        { 
+                        {
                             this.Hide();
                             customerInputForm.FormClosed += (s, args) => this.Close();
                             customerInputForm.Show();
@@ -92,18 +74,11 @@ namespace ATM_Machine
                         MessageBox.Show("Invalid operation.", "Operation Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                 }
-                
+
                 flowLayoutPanel1.Controls.Add(btn);
 
-                //this.Controls.Add(btn);
-
-                yOffset += btn.Height + 10; // move next button down
+                yOffset += btn.Height + 10;
             }
         }
-    }
-
-    public class DynamicBottonModel
-    {
-        public string Text { get; set; }
     }
 }
