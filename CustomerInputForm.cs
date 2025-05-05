@@ -103,7 +103,7 @@ namespace ATM_Machine
                         if (results == 3) MessageBox.Show("There is not enough money in your account to with draw the amount you entered.");
                         if (results == 4) MessageBox.Show("There is not enough money in the atm to support your transaction.");
                         if (results == 0) MessageBox.Show($"You have withdrawn the amount of ${textBox1.Text} from your account. You new balance for this account is now {acc.viewBalance()}.");
-                        
+
                         Customer currentCustomer = Account.getCustomer(acc.customerID).customer;
                         UserMenu userMenuForm = new UserMenu(currentCustomer);
 
@@ -128,13 +128,9 @@ namespace ATM_Machine
                     }
                     if (ops == "transfer")
                     {
+                        int fromAccount = SessionManager.GetFromAccount();
+                        int toAccount = SessionManager.GetToAccount();
                         acc.transferMoney(inputValue, 100000, acc);
-                        Customer currentCustomer = Account.getCustomer(acc.customerID).customer;
-                        UserMenu userMenuForm = new UserMenu(currentCustomer);
-
-                        this.Hide();
-                        userMenuForm.FormClosed += (s, args) => this.Close();
-                        userMenuForm.Show();
                     }
                 }
                 else
@@ -146,12 +142,17 @@ namespace ATM_Machine
             {
                 MessageBox.Show("You need to enter valid input.");
             }
-            
+
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            SessionManager.Logout();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ATM_Machine
 {
-    class Customer
+    public class Customer
     {
         int id;
         string name;

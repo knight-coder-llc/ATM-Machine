@@ -50,5 +50,10 @@ namespace ATM_Machine
             accountsList.FormClosed += (s, args) => this.Close();
             accountsList.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            SessionManager.Logout();
+        }
     }
 }

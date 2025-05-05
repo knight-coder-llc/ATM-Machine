@@ -14,6 +14,8 @@ namespace ATM_Machine
             var result = Account.loginToAccount(userIdInput.Text, pinInput.Text);
             if(result.status == 1)
             {
+                SessionManager.CurrentUser = result.customer;
+
                 UserMenu userMenuForm = new UserMenu(result.customer);
                 this.Hide();
                 userMenuForm.FormClosed += (s, args) => this.Close();

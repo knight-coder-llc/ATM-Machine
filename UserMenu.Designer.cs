@@ -32,11 +32,13 @@
             label1 = new Label();
             label3 = new Label();
             panel2 = new Panel();
+            button5 = new Button();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -75,11 +77,27 @@
             // panel2
             // 
             panel2.BackColor = Color.Blue;
+            panel2.Controls.Add(button5);
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(0, 414);
             panel2.Name = "panel2";
             panel2.Size = new Size(800, 36);
             panel2.TabIndex = 2;
+            // 
+            // button5
+            // 
+            button5.Anchor = AnchorStyles.None;
+            button5.BackColor = Color.Blue;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Segoe UI", 12F);
+            button5.ForeColor = SystemColors.Control;
+            button5.Location = new Point(600, 0);
+            button5.Name = "button5";
+            button5.Size = new Size(91, 36);
+            button5.TabIndex = 0;
+            button5.Text = "LOGOUT";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button1
             // 
@@ -152,6 +170,7 @@
             Text = "UserMenu";
             WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -165,5 +184,6 @@
         private Button button2;
         private Button button3;
         private Button button4;
+        private Button button5;
     }
 }

@@ -51,8 +51,20 @@ namespace ATM_Machine
                 MySqlDataReader myReader = cmd.ExecuteReader();
                 if (myReader.Read())
                 {
-                    transactionNum = Int32.Parse(myReader[0].ToString());
-                    System.Diagnostics.Debug.WriteLine("newTrans number" + transactionNum);
+                    object result = myReader[0];
+                    System.Diagnostics.Debug.WriteLine($"Raw SQL Result: {result}");
+
+                    if (result != DBNull.Value && !string.IsNullOrWhiteSpace(result.ToString()))
+                    {
+                        transactionNum = Convert.ToInt32(myReader[0].ToString());
+                        System.Diagnostics.Debug.WriteLine("newTrans number" + transactionNum);
+                    }
+                    else
+                    {
+                        transactionNum = 0; // default start
+                        System.Diagnostics.Debug.WriteLine("No previous transaction, starting at 0.");
+                    }
+                    
                 }
                 myReader.Close();
             }
@@ -86,15 +98,15 @@ namespace ATM_Machine
                     cmd.Parameters.AddWithValue("@fAcc", fromAccount);
                     cmd.Parameters.AddWithValue("@tAcc", toAccount);
                     date = DateTime.Now;
-                    cmd.Parameters.AddWithValue("@dT", date);
+                    cmd.Parameters.AddWithValue("@dT", date.ToString("yyyy-MM-dd HH:mm:ss"));
                     cmd.ExecuteNonQuery();
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine(ex.ToString());
+                    System.Diagnostics.Debug.WriteLine(ex.ToString());
                 }
                 conn.Close();
-                Console.WriteLine("Done.");
+                System.Diagnostics.Debug.WriteLine("Done.");
             }
         }
     }

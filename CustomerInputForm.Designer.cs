@@ -33,6 +33,7 @@
             label1 = new Label();
             label3 = new Label();
             panel2 = new Panel();
+            button15 = new Button();
             label4 = new Label();
             textBox1 = new TextBox();
             button1 = new Button();
@@ -50,6 +51,7 @@
             button13 = new Button();
             button14 = new Button();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -100,11 +102,27 @@
             // panel2
             // 
             panel2.BackColor = Color.Blue;
+            panel2.Controls.Add(button15);
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(0, 563);
             panel2.Name = "panel2";
             panel2.Size = new Size(1020, 36);
             panel2.TabIndex = 3;
+            // 
+            // button15
+            // 
+            button15.Anchor = AnchorStyles.None;
+            button15.BackColor = Color.Blue;
+            button15.FlatStyle = FlatStyle.Flat;
+            button15.Font = new Font("Segoe UI", 12F);
+            button15.ForeColor = SystemColors.Control;
+            button15.Location = new Point(820, 0);
+            button15.Name = "button15";
+            button15.Size = new Size(91, 36);
+            button15.TabIndex = 2;
+            button15.Text = "LOGOUT";
+            button15.UseVisualStyleBackColor = false;
+            button15.Click += button15_Click;
             // 
             // label4
             // 
@@ -366,6 +384,7 @@
             Text = "CustomerInputForm";
             WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -393,5 +412,6 @@
         private Button button12;
         private Button button13;
         private Button button14;
+        private Button button15;
     }
 }

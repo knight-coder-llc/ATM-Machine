@@ -67,26 +67,29 @@ namespace ATM_Machine
         }
         public void transferMoney(double amount, double machineCash, Account acc)
         {
-            int results = withdrawMoney(amount, 100000);
-            if (results == 1) MessageBox.Show("You have reached the daily transaction limit.");
-            if (results == 2) MessageBox.Show("You withdrawal amount must not be more than the amount of $3000.00 for a daily transaction.");
-            if (results == 3) MessageBox.Show("There is not enough money in your account to with draw the amount you entered.");
-            if (results == 4) MessageBox.Show("There is not enough money in the atm to support your transaction.");
-            if (results == 0) MessageBox.Show($"You have withdrawn the amount of ${amount} from your account. You new balance for this account is now {acc.viewBalance()}.");
-        
-            
-            var result = getCustomer(acc.customerID);
-            if (result.status == 1)
-            {
-                AccountsList accountsList = new AccountsList("deposit", result.customer);                 
-                accountsList.Show();
-            }
-            else
-            {
-                MessageBox.Show("Unable to locate the account.", "Transfer Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                UserMenu userMenuForm = new UserMenu(result.customer);
-            }
-                      
+            var customer = SessionManager.CurrentUser;
+            var from = SessionManager.GetFromAccount();
+            var to = SessionManager.GetToAccount();
+
+            System.Diagnostics.Debug.WriteLine($"From: {from}, To: {to}");
+            //int results = withdrawMoney(amount, 100000);
+            //if (results == 1) MessageBox.Show("You have reached the daily transaction limit.");
+            //if (results == 2) MessageBox.Show("You withdrawal amount must not be more than the amount of $3000.00 for a daily transaction.");
+            //if (results == 3) MessageBox.Show("There is not enough money in your account to with draw the amount you entered.");
+            //if (results == 4) MessageBox.Show("There is not enough money in the atm to support your transaction.");
+            //if (results == 0) MessageBox.Show($"You have withdrawn the amount of ${amount} from your account. You new balance for this account is now ${acc.viewBalance()}.");
+
+            //results = depositMoney(amount, 100000);
+            //if (results == 1) MessageBox.Show("You have reached the daily transaction limit.");
+            //if (results == 2) MessageBox.Show("You withdrawal amount must not be more than the amount of $3000.00 for a daily transaction.");
+            //if (results == 3) MessageBox.Show("There is not enough money in your account to with draw the amount you entered.");
+            //if (results == 4) MessageBox.Show("There is not enough money in the atm to support your transaction.");
+            //if (results == 0) MessageBox.Show($"You have deposited the amount of ${amount} to your account. You new balance for this account is now ${acc.viewBalance()}.");
+
+            //UserMenu userMenuForm = new UserMenu(customer);
+            //Form.ActiveForm.Close();
+            //userMenuForm.Show();
+
         }
         private void updateAccountData()
         {

@@ -32,9 +32,13 @@
             label1 = new Label();
             label3 = new Label();
             panel2 = new Panel();
+            button5 = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            button1 = new Button();
             label2 = new Label();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -73,22 +77,52 @@
             // panel2
             // 
             panel2.BackColor = Color.Blue;
+            panel2.Controls.Add(button5);
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(0, 414);
             panel2.Name = "panel2";
             panel2.Size = new Size(800, 36);
             panel2.TabIndex = 2;
             // 
+            // button5
+            // 
+            button5.Anchor = AnchorStyles.None;
+            button5.BackColor = Color.Blue;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Segoe UI", 12F);
+            button5.ForeColor = SystemColors.Control;
+            button5.Location = new Point(598, 0);
+            button5.Name = "button5";
+            button5.Size = new Size(91, 36);
+            button5.TabIndex = 1;
+            button5.Text = "LOGOUT";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
+            // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.AutoSize = true;
+            flowLayoutPanel1.Controls.Add(button1);
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanel1.Location = new Point(0, 82);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(800, 332);
             flowLayoutPanel1.TabIndex = 3;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.Blue;
+            button1.Font = new Font("Tahoma", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = SystemColors.ButtonFace;
+            button1.Location = new Point(3, 3);
+            button1.Name = "button1";
+            button1.Size = new Size(138, 53);
+            button1.TabIndex = 7;
+            button1.Text = "BACK";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label2
             // 
@@ -116,6 +150,8 @@
             WindowState = FormWindowState.Maximized;
             Load += AccountsList_Load;
             panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            flowLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -128,5 +164,7 @@
         private Panel panel2;
         private FlowLayoutPanel flowLayoutPanel1;
         private Label label2;
+        private Button button1;
+        private Button button5;
     }
 }
